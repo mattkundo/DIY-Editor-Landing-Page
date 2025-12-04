@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>BioPic Studios Slideshow Editor</title>
+    <meta name="description" content="Create stunning memorial slideshows and legacy videos from your cherished photos with custom music.">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://editor.biopicstudios.com">
+    <meta property="og:title" content="BioPic Studios Slideshow Editor">
+    <meta property="og:description" content="Create stunning memorial slideshows and legacy videos from your cherished photos with custom music.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="BioPic Studios Slideshow Editor">
+    <meta property="twitter:description" content="Create stunning memorial slideshows and legacy videos from your cherished photos with custom music.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark': {
+                            900: '#000000',
+                            800: '#0a0a0a',
+                            700: '#111111',
+                            600: '#1a1a1a',
+                            500: '#222222',
+                            400: '#2a2a2a',
+                        },
+                        'accent': {
+                            blue: '#3b82f6',
+                            purple: '#8b5cf6',
+                            green: '#10b981',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #000000;
+        }
+        .gradient-hero {
+            background: radial-gradient(ellipse at top, #1a1a1a 0%, #0a0a0a 50%, #000000 100%);
+        }
+        .card-gradient {
+            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+            border: 1px solid #2a2a2a;
+        }
+        .icon-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Beta Notice Banner -->
+    <div class="bg-blue-600 text-white text-xs sm:text-sm py-2 px-4 text-center">
+        <span class="font-semibold">Beta Notice:</span> You're using an early version of the BioPic DIY Slideshow Editor. We're working hard to make it perfect! Please don't hesitate to reach out via <a href="mailto:support@biopicstudios.com" class="underline">Contact Us</a> with any questions or thoughts.
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-dark-900/90 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center items-center h-20 relative">
+                <a href="/" class="flex items-center">
+                    <img src="images/logo-white.png" alt="BioPic Studios" class="h-12">
+                </a>
+                <a href="mailto:support@biopicstudios.com" class="absolute right-0 text-gray-400 hover:text-white text-sm transition">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-hero py-20 sm:py-28 lg:py-32">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+                Create Heartfelt Memorial<br>Slideshows with Ease
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Transform cherished photos into a beautiful tribute in minutes.<br class="hidden sm:block">
+                Simple, dignified, and ready when you need it most.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://editor.biopicstudios.com/signup" class="bg-white text-dark-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition inline-flex items-center justify-center">
+                    Start Your Tribute Now
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+                <a href="https://editor.biopicstudios.com/login" class="border border-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition">
+                    Log In
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points + Solution Section -->
+    <section class="py-16 sm:py-24 bg-dark-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-2">When Every Moment Counts:</h2>
+                <p class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-400">Crafting a Lasting Tribute</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                <!-- Pain Points -->
+                <div class="space-y-6">
+                    <!-- Time is Short -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-1">Time is Short</h3>
+                            <p class="text-gray-400 text-sm">During difficult times, creating a meaningful memorial can feel overwhelming when you're already under pressure.</p>
+                        </div>
+                    </div>
+
+                    <!-- Resources Are Strained -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-1">Resources Are Strained</h3>
+                            <p class="text-gray-400 text-sm">Professional video services can cost hundreds or thousands of dollars—money that could be better spent elsewhere.</p>
+                        </div>
+                    </div>
+
+                    <!-- The Tribute Matters -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-1">The Tribute Matters</h3>
+                            <p class="text-gray-400 text-sm">You want to honor a loved one with something beautiful and meaningful, not settle for a generic template.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution Card -->
+                <div class="card-gradient rounded-2xl p-8">
+                    <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">The BioPic Solution</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        The BioPic DIY Slideshow Editor provides a compassionate and straightforward way to turn your precious photos into a touching video tribute. Focus on what matters most, and let us handle the technical details. Create a professional memorial slideshow in minutes, not hours or days.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 sm:py-24 bg-dark-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-3">Powerful Features, Effortless Creation</h2>
+                <p class="text-gray-400">Everything you need to create a beautiful memorial slideshow, without the complexity</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1: Drag & Drop -->
+                <div class="card-gradient rounded-xl p-6">
+                    <div class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Intuitive Drag & Drop Editor</h3>
+                    <p class="text-gray-400 text-sm">Easily arrange your photos and music on our timeline. Reorder, trim, and adjust with a few clicks – no complex software to learn.</p>
+                </div>
+
+                <!-- Feature 2: Text & Sound -->
+                <div class="card-gradient rounded-xl p-6">
+                    <div class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Tell Your Story with Text & Sound</h3>
+                    <p class="text-gray-400 text-sm">Add custom text overlays, title slides, and choose from our music library or upload your own audio to set the perfect mood.</p>
+                </div>
+
+                <!-- Feature 3: Motion Effects -->
+                <div class="card-gradient rounded-xl p-6">
+                    <div class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2m0 2v2m0-2H5m2 0h2m6 8v2m0-2v-2m0 2h-2m2 0h2M5 12H3m2 0h2m0 0V10m0 2v2m10-6V4m0 2h2m-2 0h-2m0 0V4m0 2v2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Motion Effects & Seamless Transitions</h3>
+                    <p class="text-gray-400 text-sm">Bring your photos to life with subtle pan and zoom effects and smooth, elegant transitions between every image.</p>
+                </div>
+
+                <!-- Feature 4: Download & Share -->
+                <div class="card-gradient rounded-xl p-6">
+                    <div class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Download & Share</h3>
+                    <p class="text-gray-400 text-sm">Render your finished slideshow in beautiful 1080p quality, ready to share with loved ones or upload to your favorite platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Collection Section -->
+    <section class="py-16 sm:py-24 bg-dark-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div>
+                    <div class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-semibold mb-4">Collect Photos from Family & Friends</h2>
+                    <p class="text-gray-400 mb-6">
+                        Create a shareable collection link that allows family and friends to upload photos directly to your project. No account needed for contributors—just share the link and watch the memories pour in.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">Share a simple link with anyone</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">Contributors upload directly to your project</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">No sign-up required for contributors</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">See who uploaded each photo</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Image Mockup -->
+                <div class="card-gradient rounded-xl p-4">
+                    <div class="bg-dark-900 rounded-lg p-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm font-medium">Uploaded Photos</span>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 bg-dark-800 rounded-lg p-3">
+                                <div class="w-12 h-12 rounded bg-red-500/80"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium">grandma_bday.jpeg</p>
+                                    <p class="text-xs text-gray-500">Position: #1</p>
+                                </div>
+                                <span class="text-xs text-blue-400">Uploaded by: Aunt Rita</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-dark-800 rounded-lg p-3">
+                                <div class="w-12 h-12 rounded bg-yellow-500/80"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium">grandma_young.jpeg</p>
+                                    <p class="text-xs text-gray-500">Position: #2</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 bg-dark-800 rounded-lg p-3">
+                                <div class="w-12 h-12 rounded bg-purple-500/80"></div>
+                                <div class="flex-1">
+                                    <p class="text-sm font-medium">at_the_park.jpeg</p>
+                                    <p class="text-xs text-gray-500">Position: #3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 text-center">Hover over the user icon to see who contributed each photo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 Easy Steps Section -->
+    <section class="py-16 sm:py-24 bg-dark-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center mb-12">Create Your Slideshow in 3 Easy Steps</h2>
+
+            <div class="grid sm:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-white text-dark-900 font-bold text-xl flex items-center justify-center mx-auto mb-4">1</div>
+                    <h3 class="font-semibold mb-2">Upload Your Photos</h3>
+                    <p class="text-gray-400 text-sm">Quickly import images and audio from your device. We support all common formats.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-white text-dark-900 font-bold text-xl flex items-center justify-center mx-auto mb-4">2</div>
+                    <h3 class="font-semibold mb-2">Arrange & Customize</h3>
+                    <p class="text-gray-400 text-sm">Drag and drop clips on the timeline, add text, music, and apply professional motion effects.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-white text-dark-900 font-bold text-xl flex items-center justify-center mx-auto mb-4">3</div>
+                    <h3 class="font-semibold mb-2">Export & Share</h3>
+                    <p class="text-gray-400 text-sm">Generate a free preview or a high-quality, watermark-free video to download and share.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 sm:py-24 bg-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-4">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold">A Priceless Tribute, Accessible to All</h2>
+            </div>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+                We believe everyone should have access to beautiful memorial keepsakes. Create your slideshow at no upfront cost, and only pay when you're ready to download the final, polished version.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Free Tier -->
+                <div class="card-gradient rounded-2xl p-8">
+                    <h3 class="text-gray-400 font-medium mb-2">High-Quality Preview</h3>
+                    <div class="text-4xl font-bold mb-6">FREE</div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">Review your full slideshow in 1080p HD</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">Small BioPic watermark included</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">Perfect for final adjustments before purchase</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Premium Tier -->
+                <div class="card-gradient rounded-2xl p-8 border border-blue-500/30">
+                    <h3 class="text-gray-400 font-medium mb-2">Premium Export</h3>
+                    <div class="flex items-baseline gap-2 mb-1">
+                        <span class="text-4xl font-bold">$25</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-6">Plus one complimentary revision</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">1080p HD quality</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">No watermarks – completely clean</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">One free revision if you need changes</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-300 text-sm">Instant download after rendering</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Services Upsell -->
+    <section class="py-16 sm:py-24 bg-dark-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mx-auto mb-6">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-4">For Unique Projects, Our Professional Team is Here</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                The BioPic DIY Editor is perfect for creating beautiful tributes quickly and affordably. However, for those with unique visions, complex needs, or who prefer a fully hands-off experience, our expert filmmakers at BioPic Studios offer bespoke memorial slideshow production.
+            </p>
+            <a href="https://biopicstudios.com" class="inline-flex items-center border border-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition">
+                Explore Custom Slideshows
+            </a>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 sm:py-24 bg-dark-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
+                Honor Their Memory,<br>Create Your Tribute Today
+            </h2>
+            <p class="text-gray-400 mb-8">
+                Start creating beautiful memorial slideshows with BioPic
+            </p>
+            <a href="https://editor.biopicstudios.com/signup" class="inline-flex items-center bg-white text-dark-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                Get Started Now
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-dark-900 border-t border-dark-500">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-500 text-sm">
+                <p class="mb-2">&copy; 2025 BioPic Studios, LLC | Version 1.1</p>
+                <div class="flex justify-center gap-4">
+                    <a href="https://biopicstudios.com/terms" class="text-blue-400 hover:text-blue-300 transition">Terms and Conditions</a>
+                    <a href="https://biopicstudios.com/privacy" class="text-blue-400 hover:text-blue-300 transition">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

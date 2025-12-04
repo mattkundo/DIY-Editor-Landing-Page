@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Create a Birthday, Wedding or Celebration Slideshow | BioPic Studios</title>
+    <meta name="description" content="Make a stunning slideshow for birthdays, weddings, graduations, anniversaries & more. Easy drag-and-drop editor. Perfect gift idea. One-time $25 fee.">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://editor.biopicstudios.com/celebration-events">
+    <meta property="og:title" content="Create a Celebration Slideshow | BioPic Studios">
+    <meta property="og:description" content="Make a stunning slideshow for birthdays, weddings, graduations & more. The perfect personalized gift.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark': {
+                            900: '#000000',
+                            800: '#0a0a0a',
+                            700: '#111111',
+                            600: '#1a1a1a',
+                            500: '#222222',
+                            400: '#2a2a2a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #000000;
+        }
+        .gradient-hero {
+            background: radial-gradient(ellipse at top, #1a1a1a 0%, #0a0a0a 50%, #000000 100%);
+        }
+        .card-gradient {
+            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+            border: 1px solid #2a2a2a;
+        }
+        .icon-gradient {
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+        }
+        .event-tag {
+            background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
+            border: 1px solid #333333;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Sticky Header -->
+    <nav class="bg-dark-900/95 backdrop-blur-sm fixed top-0 w-full z-50 border-b border-dark-500">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center">
+                    <img src="images/logo-white.png" alt="BioPic Studios" class="h-8">
+                </a>
+                <a href="https://editor.biopicstudios.com/signup" class="bg-white text-dark-900 px-5 py-2 rounded-lg font-medium text-sm hover:bg-gray-100 transition">
+                    Start Creating
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-hero pt-28 pb-20 sm:pt-32 sm:pb-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Event Tags -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <span class="event-tag px-3 py-1 rounded-full text-sm text-gray-300">🎂 Birthdays</span>
+                <span class="event-tag px-3 py-1 rounded-full text-sm text-gray-300">🎓 Graduations</span>
+                <span class="event-tag px-3 py-1 rounded-full text-sm text-gray-300">💍 Weddings</span>
+                <span class="event-tag px-3 py-1 rounded-full text-sm text-gray-300">💕 Anniversaries</span>
+                <span class="event-tag px-3 py-1 rounded-full text-sm text-gray-300">🎉 Retirements</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+                Make a Slideshow They'll<br class="hidden sm:block">Never Forget
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                The perfect personalized gift for any celebration. Create a beautiful video slideshow with your favorite photos and meaningful music in minutes.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="https://editor.biopicstudios.com/signup" class="bg-white text-dark-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition inline-flex items-center justify-center text-lg">
+                    Start Creating Your Gift
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">Free to create • $25 for final export • Ready in 30 minutes</p>
+        </div>
+    </section>
+
+    <!-- Event Use Cases -->
+    <section class="py-12 bg-dark-800 border-y border-dark-500">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl font-semibold text-center mb-8">Perfect For Any Life Celebration</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+                <div class="p-4">
+                    <div class="text-3xl mb-2">🎂</div>
+                    <div class="text-sm text-gray-400">Birthday<br>Slideshows</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl mb-2">🎓</div>
+                    <div class="text-sm text-gray-400">Graduation<br>Videos</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl mb-2">💍</div>
+                    <div class="text-sm text-gray-400">Wedding &<br>Rehearsal</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl mb-2">💕</div>
+                    <div class="text-sm text-gray-400">Anniversary<br>Tributes</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl mb-2">🎉</div>
+                    <div class="text-sm text-gray-400">Retirement<br>Parties</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl mb-2">👶</div>
+                    <div class="text-sm text-gray-400">Baby Showers<br>& More</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why a Slideshow -->
+    <section class="py-16 sm:py-20 bg-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-4">Why a Slideshow Makes the Perfect Gift</h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">More personal than a gift card. More meaningful than flowers. A custom slideshow shows you put thought into their special day.</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-14 h-14 rounded-full icon-gradient flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-3">Deeply Personal</h3>
+                    <p class="text-gray-400">Fill it with memories only you share. Add the song that means something to both of you.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-14 h-14 rounded-full icon-gradient flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-3">Gets Real Reactions</h3>
+                    <p class="text-gray-400">Watch their face light up when they see their life story set to music. These moments create tears of joy.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-14 h-14 rounded-full icon-gradient flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-3">Lasts Forever</h3>
+                    <p class="text-gray-400">Unlike flowers or gift cards, a slideshow is a keepsake they can watch for years to come.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Showcase -->
+    <section class="py-16 sm:py-20 bg-dark-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-4">Capture Every Special Moment</h2>
+            <p class="text-gray-400 text-center mb-10 max-w-2xl mx-auto">From wedding preparations to anniversary memories—every photo tells part of the story.</p>
+
+            <!-- Photo Grid with different sizes -->
+            <div class="grid grid-cols-6 gap-3 sm:gap-4">
+                <div class="col-span-4 row-span-2 rounded-xl overflow-hidden card-gradient">
+                    <img src="images/wedding-prep.jpg" alt="Wedding preparation" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+                </div>
+                <div class="col-span-2 rounded-xl overflow-hidden card-gradient aspect-square">
+                    <img src="images/couple-vintage.jpg" alt="Happy couple" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+                </div>
+                <div class="col-span-2 rounded-xl overflow-hidden card-gradient aspect-square">
+                    <img src="images/family-children.png" alt="Family memories" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+                </div>
+            </div>
+
+            <p class="text-center text-gray-500 text-sm mt-6">Upload photos from any device—we'll bring them to life</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 sm:py-20 bg-dark-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-12">Create Your Slideshow in 3 Easy Steps</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-14 h-14 rounded-full bg-white text-dark-900 font-bold text-xl flex items-center justify-center mx-auto mb-5">1</div>
+                    <h3 class="font-semibold text-lg mb-3">Gather Your Photos</h3>
+                    <p class="text-gray-400">Pull favorites from your phone, computer, or social media. Upload them all with a simple drag and drop.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-14 h-14 rounded-full bg-white text-dark-900 font-bold text-xl flex items-center justify-center mx-auto mb-5">2</div>
+                    <h3 class="font-semibold text-lg mb-3">Pick Their Song</h3>
+                    <p class="text-gray-400">Upload the song that will make them smile (or cry happy tears). We handle the rest automatically.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-14 h-14 rounded-full bg-white text-dark-900 font-bold text-xl flex items-center justify-center mx-auto mb-5">3</div>
+                    <h3 class="font-semibold text-lg mb-3">Share the Love</h3>
+                    <p class="text-gray-400">Export your HD video and play it at the party, share via text, or project it for the whole room to see.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://editor.biopicstudios.com/signup" class="inline-flex items-center bg-white text-dark-900 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                    Start Creating
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 sm:py-20 bg-dark-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-4">No Experience Needed</h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">Our editor was built for busy people who want professional results without the learning curve.</p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-gradient rounded-xl p-6">
+                    <div class="w-10 h-10 rounded-lg icon-gradient flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Drag & Drop Simple</h3>
+                    <p class="text-gray-400 text-sm">If you can use your phone, you can use our editor. Just drag photos into place.</p>
+                </div>
+
+                <div class="card-gradient rounded-xl p-6">
+                    <div class="w-10 h-10 rounded-lg icon-gradient flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Use Any Song</h3>
+                    <p class="text-gray-400 text-sm">Upload their favorite track—the one that'll make them say "How did you know?"</p>
+                </div>
+
+                <div class="card-gradient rounded-xl p-6">
+                    <div class="w-10 h-10 rounded-lg icon-gradient flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2m0 2v2m0-2H5m2 0h2m6 8v2m0-2v-2m0 2h-2m2 0h2M5 12H3m2 0h2m0 0V10m0 2v2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Cinematic Motion</h3>
+                    <p class="text-gray-400 text-sm">Photos come alive with smooth pan and zoom effects. Looks like a pro made it.</p>
+                </div>
+
+                <div class="card-gradient rounded-xl p-6">
+                    <div class="w-10 h-10 rounded-lg icon-gradient flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Add Titles & Captions</h3>
+                    <p class="text-gray-400 text-sm">"Happy 50th Mom!" or "Class of 2025"—personalize with text that matches the moment.</p>
+                </div>
+
+                <div class="card-gradient rounded-xl p-6">
+                    <div class="w-10 h-10 rounded-lg icon-gradient flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Crystal Clear HD</h3>
+                    <p class="text-gray-400 text-sm">1080p quality that looks great on any screen—from phones to TVs.</p>
+                </div>
+
+                <div class="card-gradient rounded-xl p-6">
+                    <div class="w-10 h-10 rounded-lg icon-gradient flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">Done in 30 Minutes</h3>
+                    <p class="text-gray-400 text-sm">Even if you're starting the night before, you'll have something beautiful ready in time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16 sm:py-20 bg-dark-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-4">A Gift That Costs Less Than Flowers</h2>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto">Create your entire slideshow for free. Only pay $25 when you're ready to export the final version—no watermarks, full HD quality.</p>
+
+            <div class="card-gradient rounded-2xl p-8 sm:p-10 max-w-md mx-auto">
+                <div class="text-gray-400 font-medium mb-2">Complete Slideshow</div>
+                <div class="flex items-baseline justify-center gap-2 mb-2">
+                    <span class="text-5xl font-bold">$25</span>
+                </div>
+                <p class="text-gray-500 text-sm mb-8">One-time payment • No subscription • Keep forever</p>
+
+                <ul class="space-y-4 text-left mb-8">
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-gray-300">Free to create and preview</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-gray-300">1080p HD quality video</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-gray-300">Unlimited photos & music</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-gray-300">1 free revision included</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span class="text-gray-300">100% satisfaction guaranteed</span>
+                    </li>
+                </ul>
+
+                <a href="https://editor.biopicstudios.com/signup" class="block w-full bg-white text-dark-900 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                    Start Creating Free
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-16 sm:py-20 bg-dark-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <blockquote class="text-xl sm:text-2xl text-gray-300 italic mb-6">
+                "I made a retirement slideshow for my dad with photos going back 40 years. When we played it at his party, there wasn't a dry eye in the room. Best gift I've ever given him."
+            </blockquote>
+            <div class="text-gray-500">— Jennifer M., Dallas TX</div>
+        </div>
+    </section>
+
+    <!-- Event-Specific Ideas -->
+    <section class="py-16 sm:py-20 bg-dark-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-12">Ideas for Your Celebration Slideshow</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card-gradient rounded-xl p-6">
+                    <h3 class="font-semibold text-lg mb-3">🎂 Birthday Slideshows</h3>
+                    <p class="text-gray-400 text-sm">Start from baby photos and show their journey year by year. Set it to their favorite song and watch them relive every milestone.</p>
+                </div>
+                <div class="card-gradient rounded-xl p-6">
+                    <h3 class="font-semibold text-lg mb-3">🎓 Graduation Videos</h3>
+                    <p class="text-gray-400 text-sm">Kindergarten to cap-and-gown—show everyone how far they've come. Perfect to play at the grad party or send to relatives who couldn't make it.</p>
+                </div>
+                <div class="card-gradient rounded-xl p-6">
+                    <h3 class="font-semibold text-lg mb-3">💍 Wedding & Rehearsal Dinner</h3>
+                    <p class="text-gray-400 text-sm">Tell the couple's love story with photos from their relationship. Play it during the rehearsal dinner or cocktail hour.</p>
+                </div>
+                <div class="card-gradient rounded-xl p-6">
+                    <h3 class="font-semibold text-lg mb-3">💕 Anniversary Tributes</h3>
+                    <p class="text-gray-400 text-sm">25 years, 50 years, or just 1—celebrate the journey together. Include wedding photos, vacations, and family moments through the years.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 sm:py-20 bg-dark-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-4">
+                Ready to Create Something Special?
+            </h2>
+            <p class="text-gray-400 mb-8">
+                Start your celebration slideshow now—it's free to create and takes about 30 minutes.
+            </p>
+            <a href="https://editor.biopicstudios.com/signup" class="inline-flex items-center bg-white text-dark-900 px-8 py-4 rounded-lg font-medium text-lg hover:bg-gray-100 transition">
+                Start Creating Your Gift
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-dark-900 border-t border-dark-500">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div class="text-gray-500 text-sm">
+                    &copy; 2025 BioPic Studios, LLC
+                </div>
+                <div class="flex gap-6 text-sm">
+                    <a href="mailto:support@biopicstudios.com" class="text-gray-400 hover:text-white transition">Contact</a>
+                    <a href="https://biopicstudios.com/terms" class="text-gray-400 hover:text-white transition">Terms</a>
+                    <a href="https://biopicstudios.com/privacy" class="text-gray-400 hover:text-white transition">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

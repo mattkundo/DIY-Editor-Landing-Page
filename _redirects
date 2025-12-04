@@ -1,0 +1,3 @@
+# Redirect privacy and terms to main site
+/privacy  https://biopicstudios.com/privacy  301
+/terms    https://biopicstudios.com/terms    301
