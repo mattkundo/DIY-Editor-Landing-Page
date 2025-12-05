@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>Celebration Slideshow Maker | Birthday, Wedding, Graduation | BioPic Studios</title>
     <meta name="description" content="Create beautiful slideshow videos for birthdays, weddings, graduations, anniversaries and more. The perfect personalized gift they'll treasure forever.">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#FFFFFF">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -20,22 +20,17 @@
             theme: {
                 extend: {
                     colors: {
-                        'dark': {
-                            900: '#000000',
-                            800: '#0a0a0a',
-                            700: '#111111',
-                            600: '#1a1a1a',
-                            500: '#222222',
-                            400: '#2a2a2a',
-                        },
-                        'accent': {
-                            orange: '#f59e0b',
-                            red: '#ef4444',
-                            green: '#10b981',
-                        }
+                        'primary': '#2C3E50',
+                        'accent': '#E74C3C',
+                        'accent-dark': '#c0392b',
+                        'text-dark': '#2C3E50',
+                        'text-light': '#7F8C8D',
+                        'bg-warm': '#FBF8F3',
+                        'bg-light': '#F8F9FA',
                     },
                     fontFamily: {
-                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        'heading': ['Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
+                        'body': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
                     }
                 }
             }
@@ -45,36 +40,74 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         html { scroll-behavior: smooth; }
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: #000000;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #FFFFFF;
+            color: #2C3E50;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
         }
         .gradient-hero {
-            background: radial-gradient(ellipse at top, #1a1a1a 0%, #0a0a0a 50%, #000000 100%);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            border-bottom: 3px solid #E74C3C;
         }
-        .card-gradient {
-            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
-            border: 1px solid #2a2a2a;
+        .card-light {
+            background: #FFFFFF;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+        .card-light:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+            border-color: #E74C3C;
         }
         .icon-gradient {
             background: linear-gradient(135deg, #E74C3C 0%, #c0392b 100%);
         }
+        .btn-primary {
+            background: #E74C3C;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: #c0392b;
+        }
+        .btn-secondary {
+            border: 2px solid #2C3E50;
+            color: #2C3E50;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: #2C3E50;
+            color: white;
+        }
+        .celebration-pill {
+            background: #FFFFFF;
+            border: 1px solid #e5e7eb;
+            color: #2C3E50;
+            transition: all 0.3s ease;
+        }
+        .celebration-pill:hover {
+            border-color: #E74C3C;
+            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.15);
+        }
     </style>
 </head>
-<body class="text-white">
+<body>
 
     <!-- Navigation -->
-    <nav class="bg-dark-900/90 backdrop-blur-sm sticky top-0 z-50">
+    <nav class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20 sm:h-24">
                 <a href="https://editor.biopicstudios.com/signup" class="flex items-center">
-                    <img src="images/logo-white.png" alt="BioPic Studios" class="h-12 sm:h-14">
+                    <img src="images/logo.png" alt="BioPic Studios" class="h-12 sm:h-14">
                 </a>
-                <a href="mailto:support@biopicstudios.com" class="text-gray-400 hover:text-white text-sm transition">
+                <a href="mailto:support@biopicstudios.com" class="text-text-light hover:text-primary text-sm transition">
                     Contact Us
                 </a>
             </div>
@@ -84,47 +117,47 @@
     <!-- Hero Section -->
     <section class="gradient-hero py-20 sm:py-28 lg:py-32">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-6 text-primary">
                 Create a Celebration Slideshow They'll Never Forget
             </h1>
-            <p class="text-lg sm:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+            <p class="text-lg sm:text-xl text-text-light mb-8 max-w-2xl mx-auto">
                 Turn photos into a personalized gift for any special occasion.
             </p>
 
-            <!-- Celebration Type Emojis -->
-            <div class="flex flex-wrap justify-center gap-8 sm:gap-10 mb-10">
-                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-4 bg-dark-700 hover:bg-dark-600 px-6 py-4 rounded-full transition">
-                    <span class="text-4xl sm:text-5xl">🎂</span>
-                    <span class="text-lg font-medium">Birthday</span>
+            <!-- Celebration Type Pills -->
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-5 mb-10">
+                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-3 celebration-pill px-5 py-3 rounded-full">
+                    <span class="text-3xl sm:text-4xl">🎂</span>
+                    <span class="text-base font-medium">Birthday</span>
                 </a>
-                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-4 bg-dark-700 hover:bg-dark-600 px-6 py-4 rounded-full transition">
-                    <span class="text-4xl sm:text-5xl">💒</span>
-                    <span class="text-lg font-medium">Wedding</span>
+                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-3 celebration-pill px-5 py-3 rounded-full">
+                    <span class="text-3xl sm:text-4xl">💒</span>
+                    <span class="text-base font-medium">Wedding</span>
                 </a>
-                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-4 bg-dark-700 hover:bg-dark-600 px-6 py-4 rounded-full transition">
-                    <span class="text-4xl sm:text-5xl">🎓</span>
-                    <span class="text-lg font-medium">Graduation</span>
+                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-3 celebration-pill px-5 py-3 rounded-full">
+                    <span class="text-3xl sm:text-4xl">🎓</span>
+                    <span class="text-base font-medium">Graduation</span>
                 </a>
-                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-4 bg-dark-700 hover:bg-dark-600 px-6 py-4 rounded-full transition">
-                    <span class="text-4xl sm:text-5xl">💍</span>
-                    <span class="text-lg font-medium">Anniversary</span>
+                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-3 celebration-pill px-5 py-3 rounded-full">
+                    <span class="text-3xl sm:text-4xl">💍</span>
+                    <span class="text-base font-medium">Anniversary</span>
                 </a>
-                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-4 bg-dark-700 hover:bg-dark-600 px-6 py-4 rounded-full transition">
-                    <span class="text-4xl sm:text-5xl">👶</span>
-                    <span class="text-lg font-medium">Baby Shower</span>
+                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-3 celebration-pill px-5 py-3 rounded-full">
+                    <span class="text-3xl sm:text-4xl">👶</span>
+                    <span class="text-base font-medium">Baby Shower</span>
                 </a>
-                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-4 bg-dark-700 hover:bg-dark-600 px-6 py-4 rounded-full transition">
-                    <span class="text-4xl sm:text-5xl">🎉</span>
-                    <span class="text-lg font-medium">Retirement</span>
+                <a href="https://editor.biopicstudios.com/signup" class="flex items-center gap-3 celebration-pill px-5 py-3 rounded-full">
+                    <span class="text-3xl sm:text-4xl">🎉</span>
+                    <span class="text-base font-medium">Retirement</span>
                 </a>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://editor.biopicstudios.com/signup" class="bg-white text-dark-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition inline-flex items-center justify-center">
+                <a href="https://editor.biopicstudios.com/signup" class="btn-primary px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center">
                     Start Creating Free
                     <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
-                <a href="https://editor.biopicstudios.com/login" class="border border-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition">
+                <a href="https://editor.biopicstudios.com/login" class="btn-secondary px-6 py-3 rounded-lg font-medium">
                     Log In
                 </a>
             </div>
@@ -132,65 +165,65 @@
     </section>
 
     <!-- Why Make a Celebration Slideshow Section -->
-    <section class="py-16 sm:py-24 bg-dark-900">
+    <section class="py-16 sm:py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-2">Why Create a Celebration Slideshow?</h2>
-                <p class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-400">Share Your Story Your Way</p>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-2 text-primary">Why Create a Celebration Slideshow?</h2>
+                <p class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-text-light">Share Your Story Your Way</p>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                 <!-- Benefits -->
                 <div class="space-y-6">
                     <!-- Easy to Create -->
-                    <a href="https://editor.biopicstudios.com/signup" class="flex items-start gap-4 hover:bg-dark-800 p-3 -m-3 rounded-xl transition">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="https://editor.biopicstudios.com/signup" class="flex items-start gap-4 hover:bg-bg-light p-3 -m-3 rounded-xl transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-white mb-1">Simple to Create</h3>
-                            <p class="text-gray-400 text-sm">Our slideshow maker has been simplified to provide quality style in a few clicks.</p>
+                            <h3 class="font-semibold text-primary mb-1">Simple to Create</h3>
+                            <p class="text-text-light text-sm">Our slideshow maker has been simplified to provide quality style in a few clicks.</p>
                         </div>
                     </a>
 
                     <!-- No Subscriptions -->
-                    <a href="https://editor.biopicstudios.com/signup" class="flex items-start gap-4 hover:bg-dark-800 p-3 -m-3 rounded-xl transition">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="https://editor.biopicstudios.com/signup" class="flex items-start gap-4 hover:bg-bg-light p-3 -m-3 rounded-xl transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-white mb-1">One-Time Payment</h3>
-                            <p class="text-gray-400 text-sm">No subscriptions. Just $25 when you're ready to export your finished slideshow.</p>
+                            <h3 class="font-semibold text-primary mb-1">One-Time Payment</h3>
+                            <p class="text-text-light text-sm">No subscriptions. Just $25 when you're ready to export your finished slideshow.</p>
                         </div>
                     </a>
 
                     <!-- Professional Results -->
-                    <a href="https://editor.biopicstudios.com/signup" class="flex items-start gap-4 hover:bg-dark-800 p-3 -m-3 rounded-xl transition">
-                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="https://editor.biopicstudios.com/signup" class="flex items-start gap-4 hover:bg-bg-light p-3 -m-3 rounded-xl transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-white mb-1">Professional Results</h3>
-                            <p class="text-gray-400 text-sm">Smooth transitions, motion effects, and HD quality that looks amazing on any screen.</p>
+                            <h3 class="font-semibold text-primary mb-1">Professional Results</h3>
+                            <p class="text-text-light text-sm">Smooth transitions, motion effects, and HD quality that looks amazing on any screen.</p>
                         </div>
                     </a>
                 </div>
 
                 <!-- Solution Card -->
-                <a href="https://editor.biopicstudios.com/signup" class="card-gradient rounded-2xl p-8 hover:border-red-500/50 transition block">
-                    <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <a href="https://editor.biopicstudios.com/signup" class="card-light rounded-2xl p-8 block">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">The BioPic Solution</h3>
-                    <p class="text-gray-400 leading-relaxed">
+                    <h3 class="text-xl font-semibold mb-4 text-primary">The BioPic Solution</h3>
+                    <p class="text-text-light leading-relaxed">
                         Our slideshow maker gives you professional results without the complexity. Just upload your photos, add your music, and let the editor handle the rest. One simple price, no subscription, and your video is ready in minutes.
                     </p>
                 </a>
@@ -198,8 +231,8 @@
         </div>
     </section>
 
-    <!-- Photo Collection Section (Moved to 3rd position) -->
-    <section class="py-16 sm:py-24 bg-dark-800">
+    <!-- Photo Collection Section -->
+    <section class="py-16 sm:py-24 bg-bg-warm">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Text Content -->
@@ -209,67 +242,67 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </a>
-                    <h2 class="text-2xl sm:text-3xl font-semibold mb-4">Collect Photos from Family & Friends</h2>
-                    <p class="text-gray-400 mb-6">
+                    <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-primary">Collect Photos from Family & Friends</h2>
+                    <p class="text-text-light mb-6">
                         Planning a surprise? Create a shareable link so everyone can secretly contribute their favorite photos. No one needs to download an app or create an account—just share the link and watch the memories pour in.
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">Perfect for surprise parties</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">Perfect for surprise parties</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">Contributors upload directly to your project</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">Contributors upload directly to your project</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">No sign-up required for contributors</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">No sign-up required for contributors</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">See who contributed each photo</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">See who contributed each photo</span>
                         </li>
                     </ul>
-                    <a href="https://editor.biopicstudios.com/signup" class="inline-flex items-center bg-white text-dark-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                    <a href="https://editor.biopicstudios.com/signup" class="inline-flex items-center btn-primary px-6 py-3 rounded-lg font-medium">
                         Start Collecting Photos
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </div>
 
                 <!-- Image Mockup -->
-                <a href="https://editor.biopicstudios.com/signup" class="card-gradient rounded-xl p-4 hover:border-red-500/50 transition block">
-                    <div class="bg-dark-900 rounded-lg p-4">
+                <a href="https://editor.biopicstudios.com/signup" class="card-light rounded-xl p-4 block">
+                    <div class="bg-bg-light rounded-lg p-4">
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-sm font-medium">Uploaded Photos</span>
+                            <span class="text-sm font-medium text-primary">Uploaded Photos</span>
                         </div>
                         <div class="space-y-3">
-                            <div class="flex items-center gap-3 bg-dark-800 rounded-lg p-3">
+                            <div class="flex items-center gap-3 bg-white rounded-lg p-3 border border-gray-100">
                                 <img src="images/family-vintage.png" alt="Family photo" class="w-12 h-12 rounded object-cover">
                                 <div class="flex-1">
-                                    <p class="text-sm font-medium">family_portrait.jpeg</p>
-                                    <p class="text-xs text-gray-500">Position: #1</p>
+                                    <p class="text-sm font-medium text-primary">family_portrait.jpeg</p>
+                                    <p class="text-xs text-text-light">Position: #1</p>
                                 </div>
-                                <span class="text-xs text-red-400">Uploaded by: Mom</span>
+                                <span class="text-xs text-accent">Uploaded by: Mom</span>
                             </div>
-                            <div class="flex items-center gap-3 bg-dark-800 rounded-lg p-3">
+                            <div class="flex items-center gap-3 bg-white rounded-lg p-3 border border-gray-100">
                                 <img src="images/couple-vintage.jpg" alt="Couple photo" class="w-12 h-12 rounded object-cover">
                                 <div class="flex-1">
-                                    <p class="text-sm font-medium">anniversary_photo.jpeg</p>
-                                    <p class="text-xs text-gray-500">Position: #2</p>
+                                    <p class="text-sm font-medium text-primary">anniversary_photo.jpeg</p>
+                                    <p class="text-xs text-text-light">Position: #2</p>
                                 </div>
-                                <span class="text-xs text-red-400">Uploaded by: Uncle Steve</span>
+                                <span class="text-xs text-accent">Uploaded by: Uncle Steve</span>
                             </div>
-                            <div class="flex items-center gap-3 bg-dark-800 rounded-lg p-3">
+                            <div class="flex items-center gap-3 bg-white rounded-lg p-3 border border-gray-100">
                                 <img src="images/photo-young.jpg" alt="Childhood photo" class="w-12 h-12 rounded object-cover">
                                 <div class="flex-1">
-                                    <p class="text-sm font-medium">childhood_photo.jpeg</p>
-                                    <p class="text-xs text-gray-500">Position: #3</p>
+                                    <p class="text-sm font-medium text-primary">childhood_photo.jpeg</p>
+                                    <p class="text-xs text-text-light">Position: #3</p>
                                 </div>
-                                <span class="text-xs text-red-400">Uploaded by: Sarah</span>
+                                <span class="text-xs text-accent">Uploaded by: Sarah</span>
                             </div>
                         </div>
-                        <p class="text-xs text-gray-500 mt-4 text-center">Hover over the user icon to see who contributed each photo</p>
+                        <p class="text-xs text-text-light mt-4 text-center">Hover over the user icon to see who contributed each photo</p>
                     </div>
                 </a>
             </div>
@@ -277,172 +310,172 @@
     </section>
 
     <!-- Photo Gallery Preview -->
-    <section class="py-16 sm:py-24 bg-dark-900">
+    <section class="py-16 sm:py-24 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-4">Tell Your Story Through Photos</h2>
-            <p class="text-gray-400 text-center mb-10 max-w-3xl mx-auto" style="white-space: nowrap;">From milestone events to everyday memories—bring together the photos that tell their story.</p>
+            <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-4 text-primary">Tell Your Story Through Photos</h2>
+            <p class="text-text-light text-center mb-10 max-w-3xl mx-auto" style="white-space: nowrap;">From milestone events to everyday memories—bring together the photos that tell their story.</p>
 
             <!-- Photo Grid -->
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <a href="https://editor.biopicstudios.com/signup" class="rounded-xl overflow-hidden card-gradient aspect-square md:row-span-2 md:aspect-auto hover:scale-105 transition">
-                    <img src="images/wedding-prep.jpg" alt="Wedding celebration" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+                <a href="https://editor.biopicstudios.com/signup" class="rounded-xl overflow-hidden card-light aspect-square md:row-span-2 md:aspect-auto hover:scale-105 transition">
+                    <img src="images/wedding-prep.jpg" alt="Wedding celebration" class="w-full h-full object-cover">
                 </a>
-                <a href="https://editor.biopicstudios.com/signup" class="rounded-xl overflow-hidden card-gradient aspect-square hover:scale-105 transition">
-                    <img src="images/couple-vintage.jpg" alt="Anniversary memories" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+                <a href="https://editor.biopicstudios.com/signup" class="rounded-xl overflow-hidden card-light aspect-square hover:scale-105 transition">
+                    <img src="images/couple-vintage.jpg" alt="Anniversary memories" class="w-full h-full object-cover">
                 </a>
-                <a href="https://editor.biopicstudios.com/signup" class="rounded-xl overflow-hidden card-gradient aspect-square hover:scale-105 transition">
-                    <img src="images/family-children.png" alt="Birthday celebration" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+                <a href="https://editor.biopicstudios.com/signup" class="rounded-xl overflow-hidden card-light aspect-square hover:scale-105 transition">
+                    <img src="images/family-children.png" alt="Birthday celebration" class="w-full h-full object-cover">
                 </a>
-                <a href="https://editor.biopicstudios.com/signup" class="rounded-xl overflow-hidden card-gradient aspect-square hover:scale-105 transition">
-                    <img src="images/family-vintage.png" alt="Family memories" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+                <a href="https://editor.biopicstudios.com/signup" class="rounded-xl overflow-hidden card-light aspect-square hover:scale-105 transition">
+                    <img src="images/family-vintage.png" alt="Family memories" class="w-full h-full object-cover">
                 </a>
-                <a href="https://editor.biopicstudios.com/signup" class="rounded-xl overflow-hidden card-gradient aspect-square hover:scale-105 transition">
-                    <img src="images/photo-young.jpg" alt="Graduation moment" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+                <a href="https://editor.biopicstudios.com/signup" class="rounded-xl overflow-hidden card-light aspect-square hover:scale-105 transition">
+                    <img src="images/photo-young.jpg" alt="Graduation moment" class="w-full h-full object-cover">
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 sm:py-24 bg-dark-800">
+    <section class="py-16 sm:py-24 bg-bg-light">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-3">Powerful Features, Effortless Creation</h2>
-                <p class="text-gray-400">Everything you need to create a beautiful celebration slideshow, without the complexity</p>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-3 text-primary">Powerful Features, Effortless Creation</h2>
+                <p class="text-text-light">Everything you need to create a beautiful celebration slideshow, without the complexity</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Feature 1: Drag & Drop -->
-                <a href="https://editor.biopicstudios.com/signup" class="card-gradient rounded-xl p-6 hover:border-red-500/50 transition block">
+                <a href="https://editor.biopicstudios.com/signup" class="card-light rounded-xl p-6 block">
                     <div class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-semibold mb-2">Intuitive Drag & Drop Editor</h3>
-                    <p class="text-gray-400 text-sm">Easily arrange your photos and music on our timeline. Reorder, trim, and adjust with a few clicks.</p>
+                    <h3 class="font-semibold mb-2 text-primary">Intuitive Drag & Drop Editor</h3>
+                    <p class="text-text-light text-sm">Easily arrange your photos and music on our timeline. Reorder, trim, and adjust with a few clicks.</p>
                 </a>
 
                 <!-- Feature 2: Music -->
-                <a href="https://editor.biopicstudios.com/signup" class="card-gradient rounded-xl p-6 hover:border-red-500/50 transition block">
+                <a href="https://editor.biopicstudios.com/signup" class="card-light rounded-xl p-6 block">
                     <div class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
                         </svg>
                     </div>
-                    <h3 class="font-semibold mb-2">Add Your Own Music</h3>
-                    <p class="text-gray-400 text-sm">Upload songs that mean something. Multiple tracks with automatic crossfades between them.</p>
+                    <h3 class="font-semibold mb-2 text-primary">Add Your Own Music</h3>
+                    <p class="text-text-light text-sm">Upload songs that mean something. Multiple tracks with automatic crossfades between them.</p>
                 </a>
 
                 <!-- Feature 3: Motion Effects -->
-                <a href="https://editor.biopicstudios.com/signup" class="card-gradient rounded-xl p-6 hover:border-red-500/50 transition block">
+                <a href="https://editor.biopicstudios.com/signup" class="card-light rounded-xl p-6 block">
                     <div class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2m0 2v2m0-2H5m2 0h2m6 8v2m0-2v-2m0 2h-2m2 0h2M5 12H3m2 0h2m0 0V10m0 2v2m10-6V4m0 2h2m-2 0h-2m0 0V4m0 2v2"></path>
                         </svg>
                     </div>
-                    <h3 class="font-semibold mb-2">Motion Effects & Transitions</h3>
-                    <p class="text-gray-400 text-sm">Subtle pan & zoom brings photos to life. Smooth transitions between every slide.</p>
+                    <h3 class="font-semibold mb-2 text-primary">Motion Effects & Transitions</h3>
+                    <p class="text-text-light text-sm">Subtle pan & zoom brings photos to life. Smooth transitions between every slide.</p>
                 </a>
 
                 <!-- Feature 4: Download & Share -->
-                <a href="https://editor.biopicstudios.com/signup" class="card-gradient rounded-xl p-6 hover:border-red-500/50 transition block">
+                <a href="https://editor.biopicstudios.com/signup" class="card-light rounded-xl p-6 block">
                     <div class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                         </svg>
                     </div>
-                    <h3 class="font-semibold mb-2">Download & Share</h3>
-                    <p class="text-gray-400 text-sm">Export in beautiful 1080p HD quality. Ready to share, stream, or play at any event.</p>
+                    <h3 class="font-semibold mb-2 text-primary">Download & Share</h3>
+                    <p class="text-text-light text-sm">Export in beautiful 1080p HD quality. Ready to share, stream, or play at any event.</p>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- 3 Easy Steps Section -->
-    <section class="py-16 sm:py-24 bg-dark-900">
+    <section class="py-16 sm:py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center mb-12">Create Your Gift in 3 Easy Steps</h2>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center mb-12 text-primary">Create Your Gift in 3 Easy Steps</h2>
 
             <div class="grid sm:grid-cols-3 gap-8">
                 <!-- Step 1 -->
-                <a href="https://editor.biopicstudios.com/signup" class="text-center hover:bg-dark-800 p-4 rounded-xl transition block">
-                    <div class="w-12 h-12 rounded-full bg-white text-dark-900 font-bold text-xl flex items-center justify-center mx-auto mb-4">1</div>
-                    <h3 class="font-semibold mb-2">Gather the Photos</h3>
-                    <p class="text-gray-400 text-sm">Upload photos yourself or share a collection link so family and friends can contribute their favorites.</p>
+                <a href="https://editor.biopicstudios.com/signup" class="text-center hover:bg-bg-light p-4 rounded-xl transition block">
+                    <div class="w-12 h-12 rounded-full bg-accent text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">1</div>
+                    <h3 class="font-semibold mb-2 text-primary">Gather the Photos</h3>
+                    <p class="text-text-light text-sm">Upload photos yourself or share a collection link so family and friends can contribute their favorites.</p>
                 </a>
 
                 <!-- Step 2 -->
-                <a href="https://editor.biopicstudios.com/signup" class="text-center hover:bg-dark-800 p-4 rounded-xl transition block">
-                    <div class="w-12 h-12 rounded-full bg-white text-dark-900 font-bold text-xl flex items-center justify-center mx-auto mb-4">2</div>
-                    <h3 class="font-semibold mb-2">Add Music & Text</h3>
-                    <p class="text-gray-400 text-sm">Pick their favorite songs and add personalized titles like "Happy 60th Birthday, Dad!"</p>
+                <a href="https://editor.biopicstudios.com/signup" class="text-center hover:bg-bg-light p-4 rounded-xl transition block">
+                    <div class="w-12 h-12 rounded-full bg-accent text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">2</div>
+                    <h3 class="font-semibold mb-2 text-primary">Add Music & Text</h3>
+                    <p class="text-text-light text-sm">Pick their favorite songs and add personalized titles like "Happy 60th Birthday, Dad!"</p>
                 </a>
 
                 <!-- Step 3 -->
-                <a href="https://editor.biopicstudios.com/signup" class="text-center hover:bg-dark-800 p-4 rounded-xl transition block">
-                    <div class="w-12 h-12 rounded-full bg-white text-dark-900 font-bold text-xl flex items-center justify-center mx-auto mb-4">3</div>
-                    <h3 class="font-semibold mb-2">Play It at the Party</h3>
-                    <p class="text-gray-400 text-sm">Download your HD video and watch the tears flow when they see their life flash before their eyes.</p>
+                <a href="https://editor.biopicstudios.com/signup" class="text-center hover:bg-bg-light p-4 rounded-xl transition block">
+                    <div class="w-12 h-12 rounded-full bg-accent text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">3</div>
+                    <h3 class="font-semibold mb-2 text-primary">Play It at the Party</h3>
+                    <p class="text-text-light text-sm">Download your HD video and watch the tears flow when they see their life flash before their eyes.</p>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section class="py-16 sm:py-24 bg-dark-800">
+    <section class="py-16 sm:py-24 bg-bg-warm">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-4">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold">Simple, Fair Pricing</h2>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary">Simple, Fair Pricing</h2>
             </div>
-            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+            <p class="text-text-light text-center mb-12 max-w-2xl mx-auto">
                 Create your entire slideshow for free. Only pay when you're ready to export the final, watermark-free version.
             </p>
 
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Free Tier -->
-                <a href="https://editor.biopicstudios.com/signup" class="card-gradient rounded-2xl p-8 hover:border-red-500/50 transition block">
-                    <h3 class="text-gray-400 font-medium mb-2">High-Quality Preview</h3>
-                    <div class="text-4xl font-bold mb-6">FREE</div>
+                <a href="https://editor.biopicstudios.com/signup" class="card-light rounded-2xl p-8 block">
+                    <h3 class="text-text-light font-medium mb-2">High-Quality Preview</h3>
+                    <div class="text-4xl font-bold mb-6 text-primary">FREE</div>
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">Review your full slideshow in 1080p HD</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">Review your full slideshow in 1080p HD</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">See your slideshow with and without effects</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">See your slideshow with and without effects</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">Rearrange your photos, add text and music</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">Rearrange your photos, add text and music</span>
                         </li>
                     </ul>
                 </a>
 
                 <!-- Premium Tier -->
-                <a href="https://editor.biopicstudios.com/signup" class="card-gradient rounded-2xl p-8 border border-red-500/30 hover:border-red-500/60 transition block">
-                    <h3 class="text-gray-400 font-medium mb-2">Premium Export</h3>
+                <a href="https://editor.biopicstudios.com/signup" class="card-light rounded-2xl p-8 border-2 border-accent/30 hover:border-accent/60 block">
+                    <h3 class="text-text-light font-medium mb-2">Premium Export</h3>
                     <div class="flex items-baseline gap-2 mb-1">
-                        <span class="text-4xl font-bold">$25</span>
+                        <span class="text-4xl font-bold text-primary">$25</span>
                     </div>
-                    <p class="text-gray-500 text-sm mb-6">One-time payment • No subscription</p>
+                    <p class="text-text-light text-sm mb-6">One-time payment • No subscription</p>
                     <ul class="space-y-3">
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">1080p HD quality</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">1080p HD quality</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">No watermarks – completely clean</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">No watermarks – completely clean</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">One free revision if you need changes</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">One free revision if you need changes</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-gray-300 text-sm">Instant download after rendering</span>
+                            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-text-dark text-sm">Instant download after rendering</span>
                         </li>
                     </ul>
                 </a>
@@ -451,33 +484,33 @@
     </section>
 
     <!-- Professional Services Upsell -->
-    <section class="py-16 sm:py-24 bg-dark-900">
+    <section class="py-16 sm:py-24 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <a href="https://editor.biopicstudios.com/signup" class="w-12 h-12 rounded-xl icon-gradient flex items-center justify-center mx-auto mb-6 hover:scale-110 transition inline-flex">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                 </svg>
             </a>
-            <h2 class="text-2xl sm:text-3xl font-semibold mb-4">Want Us to Make It For You?</h2>
-            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-primary">Want Us to Make It For You?</h2>
+            <p class="text-text-light mb-8 max-w-2xl mx-auto">
                 Short on time? Our professional team can create a stunning celebration slideshow for you. Just send us the photos and tell us about the occasion—we'll handle the rest.
             </p>
-            <a href="https://biopicstudios.com" class="inline-flex items-center border border-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition">
+            <a href="https://biopicstudios.com" class="inline-flex items-center btn-secondary px-6 py-3 rounded-lg font-medium">
                 Explore Professional Services
             </a>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="py-16 sm:py-24 bg-dark-800">
+    <section class="py-16 sm:py-24 bg-bg-light">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4 text-primary">
                 Ready to Create an Unforgettable Gift?
             </h2>
-            <p class="text-gray-400 mb-8">
+            <p class="text-text-light mb-8">
                 Start building your celebration slideshow now—it's free to create
             </p>
-            <a href="https://editor.biopicstudios.com/signup" class="inline-flex items-center bg-white text-dark-900 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+            <a href="https://editor.biopicstudios.com/signup" class="inline-flex items-center btn-primary px-6 py-3 rounded-lg font-medium">
                 Get Started Free
                 <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
@@ -485,13 +518,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-dark-900 border-t border-dark-500">
+    <footer class="py-8 bg-white border-t border-gray-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-gray-500 text-sm">
+            <div class="text-center text-text-light text-sm">
                 <p class="mb-2">&copy; 2025 BioPic Studios, LLC</p>
                 <div class="flex justify-center gap-4">
-                    <a href="https://biopicstudios.com/terms" class="text-blue-400 hover:text-blue-300 transition">Terms and Conditions</a>
-                    <a href="https://biopicstudios.com/privacy" class="text-blue-400 hover:text-blue-300 transition">Privacy Policy</a>
+                    <a href="https://biopicstudios.com/terms" class="text-accent hover:text-accent-dark transition">Terms and Conditions</a>
+                    <a href="https://biopicstudios.com/privacy" class="text-accent hover:text-accent-dark transition">Privacy Policy</a>
                 </div>
             </div>
         </div>
