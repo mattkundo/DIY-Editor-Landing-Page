@@ -1,3 +1,17 @@
+# Pass through assets for all subdomains (must be first)
+https://custom-slideshows.biopicstudios.com/images/*  /images/:splat  200
+https://celebration-slideshows.biopicstudios.com/images/*  /images/:splat  200
+https://memorial-slideshows.biopicstudios.com/images/*  /images/:splat  200
+https://milestone-celebration.biopicstudios.com/images/*  /images/:splat  200
+https://memorial-slideshow.biopicstudios.com/images/*  /images/:splat  200
+
+# Subdomain routing for landing pages
+https://custom-slideshows.biopicstudios.com/  /custom-slideshow.html  200!
+https://celebration-slideshows.biopicstudios.com/  /celebration-events.html  200!
+https://memorial-slideshows.biopicstudios.com/  /memorial-tribute.html  200!
+https://milestone-celebration.biopicstudios.com/  /milestone-celebration-lp.html  200!
+https://memorial-slideshow.biopicstudios.com/  /memorial-slideshow-lp.html  200!
+
 # Redirect privacy and terms to main site
 /privacy  https://biopicstudios.com/privacy  301
 /terms    https://biopicstudios.com/terms    301

@@ -34,6 +34,42 @@ X-Content-Type-Options = "nosniff"
 Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
+from = "https://custom-slideshows.biopicstudios.com/images/*"
+to = "/images/:splat"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://celebration-slideshows.biopicstudios.com/images/*"
+to = "/images/:splat"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://memorial-slideshows.biopicstudios.com/images/*"
+to = "/images/:splat"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
 from = "/privacy"
 to = "https://biopicstudios.com/privacy"
 status = 301.0
@@ -50,6 +86,42 @@ from = "/terms"
 to = "https://biopicstudios.com/terms"
 status = 301.0
 force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://custom-slideshows.biopicstudios.com/"
+to = "/custom-slideshow.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://celebration-slideshows.biopicstudios.com/"
+to = "/celebration-events.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://memorial-slideshows.biopicstudios.com/"
+to = "/memorial-tribute.html"
+status = 200.0
+force = true
 
 [redirects.query]
 

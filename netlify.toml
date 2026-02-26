@@ -18,3 +18,34 @@
   from = "/terms"
   to = "https://biopicstudios.com/terms"
   status = 301
+
+# Subdomain routing for landing pages (root path only)
+[[redirects]]
+  from = "https://custom-slideshows.biopicstudios.com/"
+  to = "/custom-slideshow.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://celebration-slideshows.biopicstudios.com/"
+  to = "/celebration-events.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://memorial-slideshows.biopicstudios.com/"
+  to = "/memorial-tribute.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://milestone-celebration.biopicstudios.com/"
+  to = "/milestone-celebration-lp.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://memorial-slideshow.biopicstudios.com/"
+  to = "/memorial-slideshow-lp.html"
+  status = 200
+  force = true

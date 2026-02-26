@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WC5S8PXT');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Analytics 4 (Direct) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D650FB87ZC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D650FB87ZC');
+    </script>
+    <!-- End Google Analytics 4 -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>Custom Slideshow Maker | BioPic Studios</title>
     <meta name="description" content="Create stunning custom slideshows from your photos with your own music. Easy drag-and-drop editor, professional results. One-time $25 fee, no subscription.">
     <meta name="theme-color" content="#FFFFFF">
+    <link rel="icon" type="image/png" href="https://biopicstudios.com/favicon.ico">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -87,9 +106,60 @@
             background: #2C3E50;
             color: white;
         }
+        /* Floating CTA Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        .floating-cta.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .floating-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 28px;
+            background: #E74C3C;
+            color: white;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(231, 76, 60, 0.4);
+            transition: all 0.3s ease;
+        }
+        .floating-cta a:hover {
+            background: #c0392b;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(231, 76, 60, 0.5);
+        }
+        @media (max-width: 640px) {
+            .floating-cta {
+                bottom: 16px;
+                right: 16px;
+                left: 16px;
+            }
+            .floating-cta a {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 24px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WC5S8PXT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Navigation -->
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -487,6 +557,60 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating CTA -->
+    <div id="floatingCTA" class="floating-cta">
+        <a href="https://editor.biopicstudios.com/login" class="btn-primary">
+            Start Creating Free
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+    </div>
+
+    <!-- Floating CTA Visibility Script -->
+    <script>
+    (function() {
+        var floatingCTA = document.getElementById('floatingCTA');
+        var heroSection = document.querySelector('section');
+
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Show after scrolling past hero section (approximately 400px)
+            if (scrollTop > 400) {
+                floatingCTA.classList.add('visible');
+            } else {
+                floatingCTA.classList.remove('visible');
+            }
+        });
+    })();
+    </script>
+
+    <!-- CTA Click Tracking -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track CTA button clicks
+        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var buttonText = this.textContent.trim().replace(/\s+/g, ' ');
+                var section = this.closest('section');
+                var location = 'unknown';
+
+                if (section) {
+                    var heading = section.querySelector('h1, h2');
+                    if (heading) {
+                        location = heading.textContent.trim().substring(0, 50);
+                    }
+                }
+
+                gtag('event', 'cta_click', {
+                    'button_text': buttonText,
+                    'button_location': location,
+                    'page_type': 'custom_slideshow'
+                });
+            });
+        });
+    });
+    </script>
 
 </body>
 </html>
